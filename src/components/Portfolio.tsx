@@ -17,7 +17,7 @@ const projects = [
     technologies: ['React', 'HTML', 'CSS', 'Vite'],
     category: 'Gestión Industrial',
     featured: true,
-    githubUrl: 'https://github.com/lagarlabs/app-de-tareas-industrial',
+    githubUrl: 'https://tareas-industriales.netlify.app/',
     readme: `Características principales:
 • Dashboard interactivo para monitorear el estado general de operaciones
 • Gestión avanzada de tareas: creación, asignación, seguimiento y cierre
@@ -38,7 +38,7 @@ Gestión de personal: Administración de plantilla, roles y desempeño`
     technologies: ['React', 'HTML', 'CSS', 'Vite'],
     category: 'Gestión Industrial',
     featured: true,
-    githubUrl: 'https://github.com/lagarlabs/app-gestion-compras-ventas',
+    githubUrl: 'https://compras-ventas.netlify.app',
     readme: `Características Principales:
 
 • Dashboard Ejecutivo: Visualización clara de KPIs, ventas, órdenes activas, productos en stock y clientes activos
