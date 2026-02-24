@@ -1,7 +1,12 @@
 import { motion } from 'motion/react';
 import { Button } from './ui/button';
-import { ArrowRight, Code, Zap, Palette } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ArrowRight, Sparkles, Code, Layers3, Rocket } from 'lucide-react';
+
+const metrics = [
+  { value: '60+', label: 'Proyectos lanzados' },
+  { value: '4.9/5', label: 'Valoración media' },
+  { value: '<24h', label: 'Respuesta inicial' }
+];
 
 export function Hero() {
   const scrollToContact = () => {
@@ -9,170 +14,67 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden ">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_500px_at_50%_200px,#3b82f6,transparent)]"></div>
-      </div>
-      
-      {/* Floating Elements - Optimized with will-change */}
-      <motion.div
-        className="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full blur-xl"
-        style={{ willChange: 'transform, opacity' }}
-        animate={{
-          y: [0, -20, 0],
-          opacity: [0.3, 0.8, 0.3],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-      />
-      <motion.div
-        className="absolute bottom-20 right-10 w-32 h-32 bg-purple-500/20 rounded-full blur-xl"
-        style={{ willChange: 'transform, opacity' }}
-        animate={{
-          y: [0, 20, 0],
-          opacity: [0.4, 0.7, 0.4],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 1,
-        }}
-      />
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
+    <section className="relative pt-36 pb-14">
+      <div className="section-shell">
+        <div className="grid lg:grid-cols-[1.2fr_1fr] gap-8 items-stretch">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="glass-card rounded-[2rem] p-8 lg:p-12"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 glass-card-soft text-cyan-100 px-4 py-2 rounded-full mb-6"
-            >
-              <Zap className="w-4 h-4" />
-              <span className="text-sm">Desarrollador Full-Stack</span>
-            </motion.div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card-soft text-cyan-100 text-sm mb-7">
+              <Sparkles className="w-4 h-4" />
+              Diseño + desarrollo para marcas que quieren destacar
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-white via-cyan-100 to-violet-100 bg-clip-text text-transparent"
-            >
-              Transformo Ideas en
-              <span className="block text-blue-600">Experiencias Digitales</span>
-            </motion.h1>
+            <h1 className="text-5xl lg:text-7xl leading-[1.02] text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-violet-100 mb-6">
+              Landing moderna,
+              <span className="block mt-2">impacto real.</span>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-xl text-slate-300 mb-8 leading-relaxed"
-            >
-              Creo páginas web y herramientas personalizadas que impulsan el crecimiento de tu empresa. 
-              Desde la conceptualización hasta el mantenimiento continuo.
-            </motion.p>
+            <p className="text-lg lg:text-xl text-slate-300 max-w-2xl leading-relaxed mb-8">
+              Diseño experiencias digitales premium con estética contemporánea, animaciones fluidas y enfoque en conversión para transformar visitas en oportunidades.
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <Button
-                onClick={scrollToContact}
-                size="lg"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-              >
-                Empezar Proyecto
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+              <Button onClick={scrollToContact} size="lg" className="rounded-xl bg-gradient-to-r from-cyan-500 to-violet-500 text-white hover:opacity-90">
+                Quiero rediseñar mi web
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white/40 bg-white/5 text-slate-100 hover:border-cyan-300 hover:bg-white/10 px-8 py-3 rounded-xl transition-all duration-300"
-                onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
+                onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+                className="rounded-xl border-white/30 bg-white/5 text-white hover:bg-white/10"
               >
-                Ver Servicios
+                Ver casos reales
               </Button>
-            </motion.div>
+            </div>
 
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1 }}
-              className="flex justify-center lg:justify-start gap-8 mt-12"
-            >
-              <div className="text-center">
-                <div className="text-2xl text-blue-600 mb-1">50+</div>
-                <div className="text-sm text-slate-300">Proyectos</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl text-blue-600 mb-1">3+</div>
-                <div className="text-sm text-slate-300">Años Experiencia</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl text-blue-600 mb-1">100%</div>
-                <div className="text-sm text-slate-300">Satisfacción</div>
-              </div>
-            </motion.div>
+            <div className="grid sm:grid-cols-3 gap-3">
+              {metrics.map((m) => (
+                <div key={m.label} className="glass-card-soft rounded-xl p-4 text-center">
+                  <p className="text-2xl text-cyan-300">{m.value}</p>
+                  <p className="text-sm text-slate-300">{m.label}</p>
+                </div>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Visual */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
+            className="space-y-4"
           >
-            <div className="relative">
-              <motion.div
-                animate={{
-                  rotate: [0, 5, 0, -5, 0],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="relative z-10"
-              >
-                <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1558181445-eca4774b2a37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBkZXZlbG9wZXJ8ZW58MXx8fHwxNzU3MjgxNjc1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                  alt="Desarrollador trabajando"
-                  className="w-full h-[500px] object-cover rounded-2xl shadow-2xl border border-white/20"
-                />
-              </motion.div>
-              
-              {/* Floating Icons */}
-              <motion.div
-                animate={{ y: [0, -10, 0], rotate: [0, 10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -left-4 glass-card p-4 rounded-xl"
-              >
-                <Code className="w-8 h-8 text-blue-600" />
-              </motion.div>
-              
-              <motion.div
-                animate={{ y: [0, 10, 0], rotate: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-4 -right-4 glass-card p-4 rounded-xl"
-              >
-                <Palette className="w-8 h-8 text-purple-600" />
-              </motion.div>
-            </div>
+            {[{ icon: Code, title: 'Frontend premium', text: 'UI moderna, tipografía cuidada y animación elegante.' }, { icon: Layers3, title: 'Arquitectura limpia', text: 'Componentes escalables para crecer sin fricción.' }, { icon: Rocket, title: 'Performance primero', text: 'Carga rápida y experiencia sólida en móvil y desktop.' }].map((item) => (
+              <div key={item.title} className="glass-card rounded-2xl p-6">
+                <item.icon className="w-8 h-8 text-cyan-300 mb-4" />
+                <h3 className="text-xl text-white mb-2">{item.title}</h3>
+                <p className="text-slate-300">{item.text}</p>
+              </div>
+            ))}
           </motion.div>
         </div>
       </div>

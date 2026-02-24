@@ -1,145 +1,91 @@
 import { motion } from 'motion/react';
 import { Card, CardContent } from './ui/card';
-import { 
-  Globe, 
-  Wrench, 
-  Paintbrush, 
-  Shield, 
-  Rocket, 
-  Settings,
-  ArrowRight
-} from 'lucide-react';
+import { Globe, Wrench, Paintbrush, Shield, Rocket, Settings, ArrowRight } from 'lucide-react';
 import { Button } from './ui/button';
 
 const services = [
   {
     icon: Globe,
-    title: 'Creación de Páginas Web',
-    description: 'Desarrollo sitios web modernos, responsivos y optimizados para todos los dispositivos. Desde landing pages hasta aplicaciones web complejas.',
-    features: ['Diseño Responsivo', 'SEO Optimizado', 'Carga Rápida', 'UI/UX Moderno'],
-    color: 'from-blue-500 to-blue-600'
+    title: 'Webs que convierten',
+    description: 'Landings y sitios corporativos con foco en mensaje, claridad y conversiones.',
+    features: ['Arquitectura de contenido', 'UI responsive', 'SEO técnico'],
   },
   {
     icon: Wrench,
-    title: 'Herramientas Personalizadas',
-    description: 'Construyo aplicaciones y herramientas específicas para las necesidades únicas de tu empresa. Automatización y eficiencia garantizada.',
-    features: ['Automatización', 'Integración APIs', 'Dashboard Admin', 'Reportes Personalizados'],
-    color: 'from-purple-500 to-purple-600'
+    title: 'Apps a medida',
+    description: 'Herramientas internas o de cliente para digitalizar y automatizar procesos.',
+    features: ['Flujos personalizados', 'Integración APIs', 'Paneles de control'],
   },
   {
     icon: Paintbrush,
-    title: 'Personalización y Acabados',
-    description: 'Refinamiento de cada detalle para que tu proyecto refleje perfectamente la identidad de tu marca y objetivos de negocio.',
-    features: ['Branding Personalizado', 'Animaciones Fluidas', 'Experiencia Usuario', 'Detalles Premium'],
-    color: 'from-emerald-500 to-emerald-600'
+    title: 'Brand experience',
+    description: 'Dirección visual moderna para dar una imagen más premium y diferenciada.',
+    features: ['Sistema visual', 'Microinteracciones', 'Consistencia cross-device'],
   },
   {
     icon: Shield,
-    title: 'Mantenimiento y Soporte',
-    description: 'Servicio continuo de mantenimiento, actualizaciones de seguridad, monitoreo y soporte técnico especializado.',
-    features: ['Soporte 24/7', 'Actualizaciones', 'Backup Automático', 'Monitoreo Continuo'],
-    color: 'from-orange-500 to-orange-600'
+    title: 'Mantenimiento continuo',
+    description: 'Soporte técnico para mantener estabilidad, seguridad y evolución del producto.',
+    features: ['Mejoras continuas', 'Hardening', 'Monitoreo'],
   },
   {
     icon: Rocket,
-    title: 'Optimización y Mejoras',
-    description: 'Análisis continuo del rendimiento y implementación de mejoras para maximizar la velocidad y conversiones.',
-    features: ['Análisis Performance', 'A/B Testing', 'Optimización SEO', 'Mejora Conversiones'],
-    color: 'from-indigo-500 to-indigo-600'
+    title: 'Optimización',
+    description: 'Auditoría y mejoras en performance, UX y embudos de conversión.',
+    features: ['Core Web Vitals', 'UX tuning', 'Iteración por datos'],
   },
   {
     icon: Settings,
-    title: 'Consultoría Técnica',
-    description: 'Asesoramiento especializado en arquitectura, tecnologías y estrategias digitales para el crecimiento sostenible.',
-    features: ['Arquitectura Técnica', 'Roadmap Tecnológico', 'Auditoría Código', 'Estrategia Digital'],
-    color: 'from-rose-500 to-rose-600'
+    title: 'Consultoría técnica',
+    description: 'Ayuda estratégica para definir stack, roadmap y prioridades de desarrollo.',
+    features: ['Plan tecnológico', 'Análisis de viabilidad', 'Estrategia de producto'],
   }
 ];
 
 export function Services() {
-  const scrollToContact = () => {
-    document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const scrollToContact = () => document.getElementById('contacto')?.scrollIntoView({ behavior: 'smooth' });
 
   return (
-    <section id="servicios" className="py-20 glass-section">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
-            Servicios Integrales
-          </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Acompaño tu proyecto desde la idea inicial hasta el mantenimiento continuo, 
-            asegurando resultados excepcionales en cada etapa.
-          </p>
-        </motion.div>
+    <section id="servicios" className="glass-section py-20">
+      <div className="section-shell">
+        <div className="text-center mb-14">
+          <h2 className="section-title mb-6">Servicios para elevar tu presencia digital</h2>
+          <p className="section-subtitle">No solo diseño bonito: creo producto digital sólido, usable y preparado para crecer.</p>
+        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.45, delay: index * 0.06 }}
             >
-              <Card className="h-full glass-card group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <CardContent className="p-8">
-                  <div className="mb-6">
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                      <service.icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl mb-3 text-white">{service.title}</h3>
-                    <p className="text-slate-300 leading-relaxed mb-6">
-                      {service.description}
-                    </p>
+              <Card className="glass-card h-full rounded-2xl">
+                <CardContent className="p-6 flex flex-col h-full">
+                  <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center mb-4">
+                    <service.icon className="w-6 h-6 text-cyan-300" />
                   </div>
-
-                  <div className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
-                        <span className="text-sm text-slate-300">{feature}</span>
-                      </div>
+                  <h3 className="text-xl text-white mb-3">{service.title}</h3>
+                  <p className="text-slate-300 mb-5">{service.description}</p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature) => (
+                      <li key={feature} className="text-sm text-slate-300 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-violet-300" />
+                        {feature}
+                      </li>
                     ))}
-                  </div>
-
-                  <Button
-                    variant="ghost"
-                    onClick={scrollToContact}
-                    className="w-full justify-between group-hover:bg-white/10 transition-colors duration-300"
-                  >
-                    Más información
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </ul>
+                  <Button variant="ghost" onClick={scrollToContact} className="mt-auto justify-between hover:bg-white/10">
+                    Solicitar propuesta
+                    <ArrowRight className="w-4 h-4" />
                   </Button>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-16"
-        >
-          <Button
-            onClick={scrollToContact}
-            size="lg"
-            className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-          >
-            Solicitar Cotización
-            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Button>
-        </motion.div>
       </div>
     </section>
   );

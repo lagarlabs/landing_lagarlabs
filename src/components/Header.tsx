@@ -3,10 +3,10 @@ import { motion } from 'motion/react';
 import { Button } from './ui/button';
 import { Menu, X, Code } from 'lucide-react';
 
-// Navigation items moved outside component to prevent recreation
 const createNavItems = (scrollToTop: () => void, scrollToSection: (id: string) => void) => [
   { label: 'Inicio', action: scrollToTop },
   { label: 'Servicios', action: () => scrollToSection('servicios') },
+  { label: 'Proceso', action: () => scrollToSection('proceso') },
   { label: 'Portfolio', action: () => scrollToSection('portfolio') },
   { label: 'Contacto', action: () => scrollToSection('contacto') }
 ];
@@ -16,18 +16,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          setIsScrolled(window.scrollY > 50);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 24);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -46,121 +35,68 @@ export function Header() {
 
   return (
     <motion.header
-      initial={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: -16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+      transition={{ duration: 0.5 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-slate-900/65 backdrop-blur-2xl shadow-[0_12px_35px_rgba(15,23,42,0.4)] border-b border-white/10' 
+        isScrolled
+          ? 'backdrop-blur-2xl bg-slate-900/60 border-b border-white/10 shadow-[0_12px_40px_rgba(2,6,23,0.45)]'
           : 'bg-transparent'
       }`}
     >
-      <nav className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-2 cursor-pointer"
-            onClick={scrollToTop}
-          >
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl flex items-center justify-center">
-              <Code className="w-6 h-6 text-white" />
-            </div>
-            <span className={`text-xl transition-colors duration-300 ${
-              isScrolled ? 'text-slate-100' : 'text-white'
-            }`}>
-              DevPro
+      <nav className="section-shell py-3">
+        <div className="glass-card-soft rounded-2xl px-4 md:px-6 py-3 flex items-center justify-between">
+          <button onClick={scrollToTop} className="flex items-center gap-3">
+            <span className="w-10 h-10 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-500 flex items-center justify-center">
+              <Code className="w-5 h-5 text-white" />
             </span>
-          </motion.div>
+            <span className="text-lg text-white tracking-wide">LagarLabs</span>
+          </button>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item, index) => (
-              <motion.button
+          <div className="hidden md:flex items-center gap-7">
+            {navItems.map((item) => (
+              <button
                 key={item.label}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
                 onClick={item.action}
-                className={`transition-colors duration-300 hover:text-cyan-300 ${
-                  isScrolled ? 'text-slate-200' : 'text-slate-100'
-                }`}
+                className="text-slate-200 hover:text-cyan-300 transition-colors"
               >
                 {item.label}
-              </motion.button>
+              </button>
             ))}
           </div>
 
-          {/* Desktop CTA Button */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4, delay: 0.4 }}
-            className="hidden md:block"
-          >
+          <div className="hidden md:block">
             <Button
               onClick={() => scrollToSection('contacto')}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-white/10 hover:bg-white/20 border border-white/20 text-white rounded-xl"
             >
-              Contactar
+              Hablemos
             </Button>
-          </motion.div>
+          </div>
 
-          {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors duration-300 ${
-              isScrolled 
-                ? 'text-slate-100 hover:bg-white/10' 
-                : 'text-slate-100 hover:bg-white/10'
-            }`}
+            className="md:hidden text-slate-100 p-2 rounded-lg hover:bg-white/10"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         <motion.div
           initial={false}
-          animate={{
-            height: isMenuOpen ? 'auto' : 0,
-            opacity: isMenuOpen ? 1 : 0
-          }}
-          transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden bg-slate-900/75 backdrop-blur-2xl rounded-lg mt-2 shadow-lg border border-white/10"
+          animate={{ height: isMenuOpen ? 'auto' : 0, opacity: isMenuOpen ? 1 : 0 }}
+          className="md:hidden overflow-hidden"
         >
-          <div className="py-4 space-y-2">
-            {navItems.map((item, index) => (
-              <motion.button
+          <div className="glass-card-soft mt-2 rounded-xl p-3 space-y-2">
+            {navItems.map((item) => (
+              <button
                 key={item.label}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ 
-                  opacity: isMenuOpen ? 1 : 0, 
-                  x: isMenuOpen ? 0 : -20 
-                }}
-                transition={{ duration: 0.3, delay: index * 0.1 }}
                 onClick={item.action}
-                className="block w-full text-left px-4 py-3 text-slate-200 hover:bg-white/10 hover:text-cyan-300 transition-colors duration-200 rounded-lg mx-2"
+                className="block w-full text-left px-3 py-2 rounded-lg text-slate-200 hover:bg-white/10"
               >
                 {item.label}
-              </motion.button>
+              </button>
             ))}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ 
-                opacity: isMenuOpen ? 1 : 0, 
-                x: isMenuOpen ? 0 : -20 
-              }}
-              transition={{ duration: 0.3, delay: 0.4 }}
-              className="px-4 pt-2"
-            >
-              <Button
-                onClick={() => scrollToSection('contacto')}
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
-              >
-                Contactar
-              </Button>
-            </motion.div>
           </div>
         </motion.div>
       </nav>

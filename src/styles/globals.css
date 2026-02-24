@@ -27,31 +27,6 @@
   --radius: 0.625rem;
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --font-weight-medium: 500;
-  --font-weight-normal: 400;
-
-}
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -85,67 +60,91 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-  }
-}
-
-/**
- * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
- */
-@layer base {
-  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
-    h1 {
-      font-size: var(--text-2xl);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    h2 {
-      font-size: var(--text-xl);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    h3 {
-      font-size: var(--text-lg);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    h4 {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    p {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-normal);
-      line-height: 1.5;
-    }
-
-    label {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    button {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-medium);
-      line-height: 1.5;
-    }
-
-    input {
-      font-size: var(--text-base);
-      font-weight: var(--font-weight-normal);
-      line-height: 1.5;
-    }
+    @apply text-foreground;
+    background:
+      radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.30), transparent 30%),
+      radial-gradient(circle at 85% 10%, rgba(6, 182, 212, 0.25), transparent 32%),
+      radial-gradient(circle at 50% 75%, rgba(168, 85, 247, 0.18), transparent 35%),
+      linear-gradient(140deg, #020617 0%, #0b1127 45%, #0f172a 100%);
+    min-height: 100vh;
+    color: #e2e8f0;
   }
 }
 
 html {
   font-size: var(--font-size);
+  scroll-behavior: smooth;
+}
+
+.liquid-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.liquid-bg::before,
+.liquid-bg::after {
+  content: '';
+  position: fixed;
+  inset: -20%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.liquid-bg::before {
+  background: conic-gradient(from 90deg, rgba(56, 189, 248, 0.18), rgba(59, 130, 246, 0.16), rgba(168, 85, 247, 0.14), rgba(16, 185, 129, 0.16), rgba(56, 189, 248, 0.18));
+  filter: blur(58px);
+  animation: aurora 20s linear infinite;
+}
+
+.liquid-bg::after {
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.14), transparent 55%);
+  mix-blend-mode: soft-light;
+  animation: pulse-haze 8s ease-in-out infinite;
+}
+
+.section-shell {
+  width: min(1200px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.glass-section {
+  position: relative;
+  border-block: 1px solid rgba(148, 163, 184, 0.15);
+  background: linear-gradient(155deg, rgba(15, 23, 42, 0.58), rgba(15, 23, 42, 0.3));
+  backdrop-filter: blur(16px);
+}
+
+.glass-card {
+  border: 1px solid rgba(148, 163, 184, 0.28) !important;
+  background: linear-gradient(155deg, rgba(15, 23, 42, 0.76), rgba(30, 41, 59, 0.32)) !important;
+  box-shadow: 0 22px 52px rgba(2, 6, 23, 0.4);
+  backdrop-filter: blur(18px);
+}
+
+.glass-card-soft {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: linear-gradient(155deg, rgba(15, 23, 42, 0.56), rgba(30, 41, 59, 0.24));
+  box-shadow: 0 12px 30px rgba(2, 6, 23, 0.3);
+  backdrop-filter: blur(14px);
+}
+
+.section-title {
+  @apply text-4xl lg:text-5xl text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-100 to-violet-100;
+}
+
+.section-subtitle {
+  @apply text-slate-300 text-lg lg:text-xl max-w-3xl mx-auto;
+}
+
+@keyframes aurora {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.06); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes pulse-haze {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.7; }
 }
 
 
