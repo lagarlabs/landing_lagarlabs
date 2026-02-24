@@ -9,7 +9,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden ">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-20"></div>
@@ -58,7 +58,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6"
+              className="inline-flex items-center gap-2 glass-card-soft text-cyan-100 px-4 py-2 rounded-full mb-6"
             >
               <Zap className="w-4 h-4" />
               <span className="text-sm">Desarrollador Full-Stack</span>
@@ -68,7 +68,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 bg-clip-text text-transparent"
+              className="text-5xl lg:text-6xl mb-6 bg-gradient-to-r from-white via-cyan-100 to-violet-100 bg-clip-text text-transparent"
             >
               Transformo Ideas en
               <span className="block text-blue-600">Experiencias Digitales</span>
@@ -78,7 +78,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-xl text-slate-600 mb-8 leading-relaxed"
+              className="text-xl text-slate-300 mb-8 leading-relaxed"
             >
               Creo páginas web y herramientas personalizadas que impulsan el crecimiento de tu empresa. 
               Desde la conceptualización hasta el mantenimiento continuo.
@@ -101,7 +101,7 @@ export function Hero() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-slate-300 hover:border-blue-400 hover:bg-blue-50 px-8 py-3 rounded-xl transition-all duration-300"
+                className="border-white/40 bg-white/5 text-slate-100 hover:border-cyan-300 hover:bg-white/10 px-8 py-3 rounded-xl transition-all duration-300"
                 onClick={() => document.getElementById('servicios')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Ver Servicios
@@ -117,15 +117,15 @@ export function Hero() {
             >
               <div className="text-center">
                 <div className="text-2xl text-blue-600 mb-1">50+</div>
-                <div className="text-sm text-slate-600">Proyectos</div>
+                <div className="text-sm text-slate-300">Proyectos</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl text-blue-600 mb-1">3+</div>
-                <div className="text-sm text-slate-600">Años Experiencia</div>
+                <div className="text-sm text-slate-300">Años Experiencia</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl text-blue-600 mb-1">100%</div>
-                <div className="text-sm text-slate-600">Satisfacción</div>
+                <div className="text-sm text-slate-300">Satisfacción</div>
               </div>
             </motion.div>
           </motion.div>
@@ -152,7 +152,7 @@ export function Hero() {
                 <ImageWithFallback
                   src="https://images.unsplash.com/photo-1558181445-eca4774b2a37?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3b3Jrc3BhY2UlMjBkZXZlbG9wZXJ8ZW58MXx8fHwxNzU3MjgxNjc1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                   alt="Desarrollador trabajando"
-                  className="w-full h-[500px] object-cover rounded-2xl shadow-2xl"
+                  className="w-full h-[500px] object-cover rounded-2xl shadow-2xl border border-white/20"
                 />
               </motion.div>
               
@@ -160,7 +160,7 @@ export function Hero() {
               <motion.div
                 animate={{ y: [0, -10, 0], rotate: [0, 10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -top-4 -left-4 bg-white p-4 rounded-xl shadow-lg"
+                className="absolute -top-4 -left-4 glass-card p-4 rounded-xl"
               >
                 <Code className="w-8 h-8 text-blue-600" />
               </motion.div>
@@ -168,7 +168,7 @@ export function Hero() {
               <motion.div
                 animate={{ y: [0, 10, 0], rotate: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-lg"
+                className="absolute -bottom-4 -right-4 glass-card p-4 rounded-xl"
               >
                 <Palette className="w-8 h-8 text-purple-600" />
               </motion.div>
