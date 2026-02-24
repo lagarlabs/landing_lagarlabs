@@ -51,7 +51,7 @@ export function Header() {
       transition={{ duration: 0.6 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'bg-white/95 backdrop-blur-md shadow-lg' 
+          ? 'bg-slate-900/65 backdrop-blur-2xl shadow-[0_12px_35px_rgba(15,23,42,0.4)] border-b border-white/10' 
           : 'bg-transparent'
       }`}
     >
@@ -67,7 +67,7 @@ export function Header() {
               <Code className="w-6 h-6 text-white" />
             </div>
             <span className={`text-xl transition-colors duration-300 ${
-              isScrolled ? 'text-slate-900' : 'text-slate-900'
+              isScrolled ? 'text-slate-100' : 'text-white'
             }`}>
               DevPro
             </span>
@@ -82,8 +82,8 @@ export function Header() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 onClick={item.action}
-                className={`transition-colors duration-300 hover:text-blue-600 ${
-                  isScrolled ? 'text-slate-700' : 'text-slate-700'
+                className={`transition-colors duration-300 hover:text-cyan-300 ${
+                  isScrolled ? 'text-slate-200' : 'text-slate-100'
                 }`}
               >
                 {item.label}
@@ -111,8 +111,8 @@ export function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors duration-300 ${
               isScrolled 
-                ? 'text-slate-700 hover:bg-slate-100' 
-                : 'text-slate-700 hover:bg-white/10'
+                ? 'text-slate-100 hover:bg-white/10' 
+                : 'text-slate-100 hover:bg-white/10'
             }`}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -127,7 +127,7 @@ export function Header() {
             opacity: isMenuOpen ? 1 : 0
           }}
           transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-lg"
+          className="md:hidden overflow-hidden bg-slate-900/75 backdrop-blur-2xl rounded-lg mt-2 shadow-lg border border-white/10"
         >
           <div className="py-4 space-y-2">
             {navItems.map((item, index) => (
@@ -140,7 +140,7 @@ export function Header() {
                 }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
                 onClick={item.action}
-                className="block w-full text-left px-4 py-3 text-slate-700 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 rounded-lg mx-2"
+                className="block w-full text-left px-4 py-3 text-slate-200 hover:bg-white/10 hover:text-cyan-300 transition-colors duration-200 rounded-lg mx-2"
               >
                 {item.label}
               </motion.button>

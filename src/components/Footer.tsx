@@ -24,7 +24,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-white relative overflow-hidden">
+    <footer className="glass-section text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600"></div>
@@ -158,7 +158,7 @@ export function Footer() {
               </div>
             </div>
 
-            <div className="mt-6 p-4 bg-slate-800 rounded-lg">
+            <div className="mt-6 p-4 glass-card-soft rounded-lg">
               <h4 className="text-white text-sm mb-2">¿Tienes un proyecto?</h4>
               <p className="text-slate-300 text-xs mb-3">
                 Hablemos sobre tu idea y cómo puedo ayudarte a hacerla realidad.
@@ -180,7 +180,7 @@ export function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="border-t border-slate-700 py-8"
+          className="border-t border-white/10 py-8"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2 text-slate-400 text-sm">

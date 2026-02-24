@@ -113,7 +113,7 @@ ${formData.message}
 
 
   return (
-    <section id="contacto" className="py-20 bg-white">
+    <section id="contacto" className="py-20 glass-section">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -122,10 +122,10 @@ ${formData.message}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
             Hablemos de Tu Proyecto
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             ¿Listo para llevar tu idea al siguiente nivel? Contacta conmigo y 
             comencemos a crear algo extraordinario juntos.
           </p>
@@ -140,9 +140,9 @@ ${formData.message}
             transition={{ duration: 0.6 }}
             className="lg:col-span-1"
           >
-            <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-50 to-purple-50">
+            <Card className="glass-card">
               <CardContent className="p-8">
-                <h3 className="text-2xl mb-6 text-slate-900">Información de Contacto</h3>
+                <h3 className="text-2xl mb-6 text-white">Información de Contacto</h3>
                 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
@@ -150,8 +150,8 @@ ${formData.message}
                       <Mail className="w-6 h-6 text-blue-600" />
                     </div>
                     <div>
-                      <h4 className="text-slate-900 mb-1">Email</h4>
-                      <p className="text-slate-600">lagarlabs@gmail.com</p>
+                      <h4 className="text-white mb-1">Email</h4>
+                      <p className="text-slate-300">lagarlabs@gmail.com</p>
                     </div>
                   </div>
 
@@ -160,8 +160,8 @@ ${formData.message}
                       <Phone className="w-6 h-6 text-emerald-600" />
                     </div>
                     <div>
-                      <h4 className="text-slate-900 mb-1">Teléfono</h4>
-                      <p className="text-slate-600">+34 670 581 236</p>
+                      <h4 className="text-white mb-1">Teléfono</h4>
+                      <p className="text-slate-300">+34 670 581 236</p>
                     </div>
                   </div>
 
@@ -170,8 +170,8 @@ ${formData.message}
                       <MapPin className="w-6 h-6 text-purple-600" />
                     </div>
                     <div>
-                      <h4 className="text-slate-900 mb-1">Ubicación</h4>
-                      <p className="text-slate-600">Agüimes, Las Palmas</p>
+                      <h4 className="text-white mb-1">Ubicación</h4>
+                      <p className="text-slate-300">Agüimes, Las Palmas</p>
                     </div>
                   </div>
 
@@ -180,19 +180,19 @@ ${formData.message}
                       <Clock className="w-6 h-6 text-orange-600" />
                     </div>
                     <div>
-                      <h4 className="text-slate-900 mb-1">Horario de Respuesta</h4>
-                      <p className="text-slate-600">24 horas máximo</p>
+                      <h4 className="text-white mb-1">Horario de Respuesta</h4>
+                      <p className="text-slate-300">24 horas máximo</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-slate-200">
-                  <h4 className="text-slate-900 mb-4">Sígueme</h4>
+                <div className="mt-8 pt-8 border-t border-white/15">
+                  <h4 className="text-white mb-4">Sígueme</h4>
                   <div className="flex gap-3">
                     <Button
                       variant="outline"
                       size="sm"
-                      className="p-3 hover:bg-blue-50 hover:border-blue-300"
+                      className="p-3 hover:bg-white/10 hover:border-blue-300"
                       onClick={() => window.open('https://www.linkedin.com/in/josué-barrios-128339294', '_blank')}
                     >
                       <Linkedin className="w-5 h-5 text-blue-600" />
@@ -200,20 +200,20 @@ ${formData.message}
                     <Button
                       variant="outline"
                       size="sm"
-                      className="p-3 hover:bg-slate-50 hover:border-slate-300"
+                      className="p-3 hover:bg-white/10 hover:border-slate-300"
                       onClick={() => window.open('https://github.com/lagarlabs', '_blank')}
                     >
-                      <Github className="w-5 h-5 text-slate-600" />
+                      <Github className="w-5 h-5 text-slate-300" />
                     </Button>
                   </div>
                 </div>
 
-                <div className="mt-8 p-4 bg-white rounded-xl">
+                <div className="mt-8 p-4 glass-card-soft rounded-xl">
                   <div className="flex items-center gap-3 mb-3">
                     <MessageSquare className="w-5 h-5 text-green-600" />
-                    <span className="text-sm text-slate-900">Consulta Gratuita</span>
+                    <span className="text-sm text-white">Consulta Gratuita</span>
                   </div>
-                  <p className="text-xs text-slate-600">
+                  <p className="text-xs text-slate-300">
                     Primera consulta sin compromiso para analizar tu proyecto y definir la mejor estrategia.
                   </p>
                 </div>
@@ -229,24 +229,24 @@ ${formData.message}
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-2"
           >
-            <Card className="border-0 shadow-lg">
+            <Card className="glass-card">
               <CardContent className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="name" className="text-slate-700">Nombre Completo *</Label>
+                      <Label htmlFor="name" className="text-slate-200">Nombre Completo *</Label>
                       <Input
                         id="name"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="mt-2 border-slate-200 focus:border-blue-400 focus:ring-blue-400"
+                        className="mt-2 border-white/20 bg-white/10 text-white placeholder:text-slate-400 focus:border-cyan-300 focus:ring-cyan-300"
                         placeholder="Tu nombre completo"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="email" className="text-slate-700">Email *</Label>
+                      <Label htmlFor="email" className="text-slate-200">Email *</Label>
                       <Input
                         id="email"
                         name="email"
@@ -254,7 +254,7 @@ ${formData.message}
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="mt-2 border-slate-200 focus:border-blue-400 focus:ring-blue-400"
+                        className="mt-2 border-white/20 bg-white/10 text-white placeholder:text-slate-400 focus:border-cyan-300 focus:ring-cyan-300"
                         placeholder="tu@email.com"
                       />
                     </div>
@@ -262,25 +262,25 @@ ${formData.message}
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <Label htmlFor="company" className="text-slate-700">Empresa</Label>
+                      <Label htmlFor="company" className="text-slate-200">Empresa</Label>
                       <Input
                         id="company"
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="mt-2 border-slate-200 focus:border-blue-400 focus:ring-blue-400"
+                        className="mt-2 border-white/20 bg-white/10 text-white placeholder:text-slate-400 focus:border-cyan-300 focus:ring-cyan-300"
                         placeholder="Nombre de tu empresa"
                       />
                     </div>
                     <div>
-                      <Label htmlFor="project" className="text-slate-700">Tipo de Proyecto *</Label>
+                      <Label htmlFor="project" className="text-slate-200">Tipo de Proyecto *</Label>
                       <select
                         id="project"
                         name="project"
                         value={formData.project}
                         onChange={handleChange}
                         required
-                        className="mt-2 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-background focus:border-blue-400 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                        className="mt-2 w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm text-white ring-offset-background focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2"
                       >
                         <option value="">Selecciona un tipo</option>
                         <option value="landing">Landing Page</option>
@@ -295,13 +295,13 @@ ${formData.message}
                   </div>
 
                   <div>
-                    <Label htmlFor="budget" className="text-slate-700">Presupuesto Estimado</Label>
+                    <Label htmlFor="budget" className="text-slate-200">Presupuesto Estimado</Label>
                     <select
                       id="budget"
                       name="budget"
                       value={formData.budget}
                       onChange={handleChange}
-                      className="mt-2 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-background focus:border-blue-400 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                      className="mt-2 w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm text-white ring-offset-background focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2"
                     >
                       <option value="">Selecciona un rango</option>
                       <option value="1000-3000">€1,000 - €3,000</option>
@@ -313,7 +313,7 @@ ${formData.message}
                   </div>
 
                   <div>
-                    <Label htmlFor="message" className="text-slate-700">Describe tu Proyecto *</Label>
+                    <Label htmlFor="message" className="text-slate-200">Describe tu Proyecto *</Label>
                     <Textarea
                       id="message"
                       name="message"
@@ -321,13 +321,13 @@ ${formData.message}
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="mt-2 border-slate-200 focus:border-blue-400 focus:ring-blue-400 resize-none"
+                      className="mt-2 border-white/20 bg-white/10 text-white placeholder:text-slate-400 focus:border-cyan-300 focus:ring-cyan-300 resize-none"
                       placeholder="Cuéntame sobre tu proyecto, objetivos, plazos y cualquier detalle relevante que me ayude a entender mejor tus necesidades..."
                     />
                   </div>
 
                   {/* Campos opcionales de contacto y llamada */}
-                  <div className="border-t border-slate-200 pt-6">
+                  <div className="border-t border-white/15 pt-6">
                     <div className="mb-4">
                       <label className="flex items-center gap-3 cursor-pointer">
                         <input
@@ -337,26 +337,26 @@ ${formData.message}
                           onChange={handleChange}
                           className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2"
                         />
-                        <span className="text-slate-700">¿Te gustaría que agendemos una llamada?</span>
+                        <span className="text-slate-200">¿Te gustaría que agendemos una llamada?</span>
                       </label>
                     </div>
 
                     {formData.needsCall && (
                       <div className="grid md:grid-cols-3 gap-4 mt-4">
                         <div>
-                          <Label htmlFor="phone" className="text-slate-700">Teléfono</Label>
+                          <Label htmlFor="phone" className="text-slate-200">Teléfono</Label>
                           <Input
                             id="phone"
                             name="phone"
                             type="tel"
                             value={formData.phone}
                             onChange={handleChange}
-                            className="mt-2 border-slate-200 focus:border-blue-400 focus:ring-blue-400"
+                            className="mt-2 border-white/20 bg-white/10 text-white placeholder:text-slate-400 focus:border-cyan-300 focus:ring-cyan-300"
                             placeholder="+34 600 000 000"
                           />
                         </div>
                         <div>
-                          <Label htmlFor="preferredDate" className="text-slate-700">Fecha Preferida</Label>
+                          <Label htmlFor="preferredDate" className="text-slate-200">Fecha Preferida</Label>
                           <Input
                             id="preferredDate"
                             name="preferredDate"
@@ -364,17 +364,17 @@ ${formData.message}
                             value={formData.preferredDate}
                             onChange={handleChange}
                             min={new Date().toISOString().split('T')[0]}
-                            className="mt-2 border-slate-200 focus:border-blue-400 focus:ring-blue-400"
+                            className="mt-2 border-white/20 bg-white/10 text-white placeholder:text-slate-400 focus:border-cyan-300 focus:ring-cyan-300"
                           />
                         </div>
                         <div>
-                          <Label htmlFor="preferredTime" className="text-slate-700">Hora Preferida</Label>
+                          <Label htmlFor="preferredTime" className="text-slate-200">Hora Preferida</Label>
                           <select
                             id="preferredTime"
                             name="preferredTime"
                             value={formData.preferredTime}
                             onChange={handleChange}
-                            className="mt-2 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-background focus:border-blue-400 focus:ring-2 focus:ring-blue-400 focus:ring-offset-2"
+                            className="mt-2 w-full rounded-md border border-white/20 bg-white/10 px-3 py-2 text-sm text-white ring-offset-background focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300 focus:ring-offset-2"
                           >
                             <option value="">Selecciona hora</option>
                             <option value="09:00">09:00</option>
@@ -406,14 +406,14 @@ ${formData.message}
                   </div>
                 </form>
 
-                <div className="mt-8 p-4 bg-green-50 rounded-xl">
+                <div className="mt-8 p-4 glass-card-soft rounded-xl">
                   <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 bg-green-100/80 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                       <MessageSquare className="w-3 h-3 text-green-600" />
                     </div>
                     <div>
-                      <h4 className="text-sm text-green-900 mb-1">Respuesta Inmediata</h4>
-                      <p className="text-xs text-green-700">
+                      <h4 className="text-sm text-emerald-300 mb-1">Respuesta Inmediata</h4>
+                      <p className="text-xs text-slate-300">
                         Al enviar se abrirá WhatsApp con toda tu información organizada. Si marcas la opción de llamada, 
                         también incluirá tus datos de contacto y fecha preferida.
                       </p>

@@ -156,7 +156,7 @@ export function Portfolio() {
   const otherProjects = useMemo(() => projects.filter(project => !project.featured), []);
 
   return (
-    <section id="portfolio" className="py-20 bg-white">
+    <section id="portfolio" className="py-20 glass-section">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -165,10 +165,10 @@ export function Portfolio() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
             Proyectos Destacados
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Cada proyecto es una oportunidad para crear soluciones innovadoras que 
             generan resultados reales y crecimiento sostenible para mis clientes.
           </p>
@@ -184,7 +184,7 @@ export function Portfolio() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
             >
-              <Card className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden h-full flex flex-col">
+              <Card className="group glass-card hover:shadow-2xl transition-all duration-500 overflow-hidden h-full flex flex-col">
                 <div className="relative overflow-hidden">
                   <img
                     src={project.image}
@@ -199,10 +199,10 @@ export function Portfolio() {
                 
                 <CardContent className="p-8 flex flex-col flex-grow">
                   <div className="flex-grow">
-                    <h3 className="text-2xl mb-3 text-slate-900 group-hover:text-blue-600 transition-colors">
+                    <h3 className="text-2xl mb-3 text-white group-hover:text-blue-600 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-slate-600 mb-6 leading-relaxed">
+                    <p className="text-slate-300 mb-6 leading-relaxed">
                       {project.description}
                     </p>
                   </div>
@@ -210,7 +210,7 @@ export function Portfolio() {
                   <div className="mt-auto">
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="bg-slate-100 text-slate-700">
+                        <Badge key={tech} variant="secondary" className="bg-white/10 text-slate-100">
                           {tech}
                         </Badge>
                       ))}
@@ -220,7 +220,7 @@ export function Portfolio() {
                     <Button 
                       variant="outline" 
                       size="sm"
-                      className="hover:bg-blue-50 hover:border-blue-300"
+                      className="hover:bg-white/10 hover:border-blue-300"
                       onClick={() => openProjectModal(project)}
                     >
                       <ExternalLink className="w-4 h-4 mr-2" />
@@ -230,7 +230,7 @@ export function Portfolio() {
                       <Button 
                         variant="ghost" 
                         size="sm"
-                        className="hover:bg-slate-100"
+                        className="hover:bg-white/10"
                         onClick={() => window.open('https://app--event-master-0693e55f.base44.app/Home', '_blank')}
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
@@ -240,7 +240,7 @@ export function Portfolio() {
                       <Button 
                         variant="ghost" 
                         size="sm"
-                        className="hover:bg-slate-100"
+                        className="hover:bg-white/10"
                         onClick={() => window.open('https://app--medi-desk-8a875304.base44.app/PatientDetail?id=67a925e1d6141bbe8a87586f', '_blank')}
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
@@ -250,7 +250,7 @@ export function Portfolio() {
                       <Button 
                         variant="ghost" 
                         size="sm"
-                        className="hover:bg-slate-100"
+                        className="hover:bg-white/10"
                         onClick={() => window.open(project.githubUrl, '_blank')}
                       >
                         <Github className="w-4 h-4 mr-2" />
@@ -276,7 +276,7 @@ export function Portfolio() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-md overflow-hidden h-full">
+                <Card className="group glass-card hover:shadow-xl transition-all duration-300 overflow-hidden h-full">
                   <div className="relative overflow-hidden">
                     <ImageWithFallback
                       src={project.image}
@@ -289,21 +289,21 @@ export function Portfolio() {
                   </div>
                   
                   <CardContent className="p-6">
-                    <h4 className="text-lg mb-2 text-slate-900 group-hover:text-blue-600 transition-colors">
+                    <h4 className="text-lg mb-2 text-white group-hover:text-blue-600 transition-colors">
                       {project.title}
                     </h4>
-                    <p className="text-sm text-slate-600 mb-4 line-clamp-3">
+                    <p className="text-sm text-slate-300 mb-4 line-clamp-3">
                       {project.description}
                     </p>
                     
                     <div className="flex flex-wrap gap-1 mb-4">
                       {project.technologies.slice(0, 2).map((tech) => (
-                        <Badge key={tech} variant="secondary" className="bg-slate-100 text-slate-700 text-xs">
+                        <Badge key={tech} variant="secondary" className="bg-white/10 text-slate-100 text-xs">
                           {tech}
                         </Badge>
                       ))}
                       {project.technologies.length > 2 && (
-                        <Badge variant="secondary" className="bg-slate-100 text-slate-700 text-xs">
+                        <Badge variant="secondary" className="bg-white/10 text-slate-100 text-xs">
                           +{project.technologies.length - 2}
                         </Badge>
                       )}
@@ -312,7 +312,7 @@ export function Portfolio() {
                     <Button 
                       variant="ghost" 
                       size="sm"
-                      className="w-full justify-center hover:bg-blue-50 hover:text-blue-600"
+                      className="w-full justify-center hover:bg-white/10 hover:text-blue-600"
                       onClick={() => openProjectModal(project)}
                     >
                       Ver Detalles
@@ -331,9 +331,9 @@ export function Portfolio() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center mt-16"
         >
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-2xl">
-            <h3 className="text-2xl mb-4 text-slate-900">¿Tienes un proyecto en mente?</h3>
-            <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
+          <div className="glass-card-soft p-8 rounded-2xl">
+            <h3 className="text-2xl mb-4 text-white">¿Tienes un proyecto en mente?</h3>
+            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
               Cada proyecto es único y merece una solución personalizada. 
               Hablemos sobre tu idea y creemos algo extraordinario juntos.
             </p>

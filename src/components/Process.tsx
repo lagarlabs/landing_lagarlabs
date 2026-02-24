@@ -50,7 +50,7 @@ const processSteps = [
 
 export function Process() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section className="py-20 glass-section">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -59,10 +59,10 @@ export function Process() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
+          <h2 className="text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
             Mi Proceso de Trabajo
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Un enfoque estructurado y colaborativo que garantiza resultados excepcionales 
             y una experiencia transparente desde el primer día.
           </p>
@@ -83,14 +83,14 @@ export function Process() {
                 <span className="text-sm text-blue-600">{index + 1}</span>
               </div>
 
-              <Card className="h-full group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
+              <Card className="h-full glass-card group hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-8">
                   <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${step.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <step.icon className="w-8 h-8 text-white" />
                   </div>
                   
-                  <h3 className="text-xl mb-4 text-slate-900">{step.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">
+                  <h3 className="text-xl mb-4 text-white">{step.title}</h3>
+                  <p className="text-slate-300 leading-relaxed">
                     {step.description}
                   </p>
                 </CardContent>
@@ -111,22 +111,22 @@ export function Process() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="text-center mt-16"
         >
-          <div className="bg-white p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
-            <h3 className="text-2xl mb-4 text-slate-900">¿Listo para empezar?</h3>
-            <p className="text-slate-600 mb-6">
+          <div className="glass-card-soft p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
+            <h3 className="text-2xl mb-4 text-white">¿Listo para empezar?</h3>
+            <p className="text-slate-300 mb-6">
               El primer paso es una conversación sin compromiso donde exploramos tu proyecto 
               y definimos la mejor estrategia para alcanzar tus objetivos.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center gap-2 text-sm text-slate-600">
+              <div className="flex items-center gap-2 text-sm text-slate-300">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 Consulta gratuita
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-600">
+              <div className="flex items-center gap-2 text-sm text-slate-300">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 Sin compromiso
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-600">
+              <div className="flex items-center gap-2 text-sm text-slate-300">
                 <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 Respuesta en 24h
               </div>
