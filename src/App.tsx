@@ -8,9 +8,9 @@ import { Footer } from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen liquid-bg text-slate-100">
       <Header />
-      <main>
+      <main className="space-y-12 pb-10">
         <Hero />
         <Services />
         <Process />

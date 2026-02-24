@@ -1,138 +1,43 @@
 import { motion } from 'motion/react';
-import { Card, CardContent } from './ui/card';
-import { 
-  MessageSquare, 
-  Lightbulb, 
-  Code2, 
-  TestTube, 
-  Rocket, 
-  HeadphonesIcon 
-} from 'lucide-react';
+import { MessageSquare, Lightbulb, Code2, TestTube, Rocket, HeadphonesIcon } from 'lucide-react';
 
 const processSteps = [
-  {
-    icon: MessageSquare,
-    title: 'Consulta Inicial',
-    description: 'Conversamos sobre tus objetivos, necesidades y visión del proyecto para entender perfectamente lo que buscas.',
-    color: 'from-blue-500 to-blue-600'
-  },
-  {
-    icon: Lightbulb,
-    title: 'Estrategia y Diseño',
-    description: 'Desarrollo la estrategia técnica y creo los diseños que mejor se adapten a tu marca y objetivos de negocio.',
-    color: 'from-purple-500 to-purple-600'
-  },
-  {
-    icon: Code2,
-    title: 'Desarrollo',
-    description: 'Escribo código limpio, escalable y optimizado utilizando las mejores prácticas y tecnologías modernas.',
-    color: 'from-emerald-500 to-emerald-600'
-  },
-  {
-    icon: TestTube,
-    title: 'Pruebas y Ajustes',
-    description: 'Realizamos pruebas exhaustivas, refinamos detalles y nos aseguramos de que todo funcione perfectamente.',
-    color: 'from-orange-500 to-orange-600'
-  },
-  {
-    icon: Rocket,
-    title: 'Lanzamiento',
-    description: 'Implementamos el proyecto en producción con todas las optimizaciones y configuraciones necesarias.',
-    color: 'from-indigo-500 to-indigo-600'
-  },
-  {
-    icon: HeadphonesIcon,
-    title: 'Soporte Continuo',
-    description: 'Te acompaño después del lanzamiento con mantenimiento, actualizaciones y mejoras continuas.',
-    color: 'from-rose-500 to-rose-600'
-  }
+  { icon: MessageSquare, title: 'Discovery', description: 'Entendemos objetivos, público y expectativas del proyecto.' },
+  { icon: Lightbulb, title: 'Dirección creativa', description: 'Definimos concepto visual, tono y arquitectura de pantalla.' },
+  { icon: Code2, title: 'Build', description: 'Desarrollo en componentes modernos y optimizados.' },
+  { icon: TestTube, title: 'QA & refinamiento', description: 'Pulimos interacciones, responsive y calidad final.' },
+  { icon: Rocket, title: 'Launch', description: 'Despliegue con checklist técnico y analítica activada.' },
+  { icon: HeadphonesIcon, title: 'Iteración', description: 'Mejora continua con soporte y evolución de features.' }
 ];
 
 export function Process() {
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="container mx-auto px-4">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-slate-900 to-blue-900 bg-clip-text text-transparent">
-            Mi Proceso de Trabajo
-          </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Un enfoque estructurado y colaborativo que garantiza resultados excepcionales 
-            y una experiencia transparente desde el primer día.
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {processSteps.map((step, index) => (
-            <motion.div
-              key={step.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative"
-            >
-              {/* Step Number */}
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-white rounded-full border-4 border-blue-200 flex items-center justify-center z-10">
-                <span className="text-sm text-blue-600">{index + 1}</span>
-              </div>
-
-              <Card className="h-full group hover:shadow-xl transition-all duration-300 border-0 shadow-lg">
-                <CardContent className="p-8">
-                  <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${step.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <step.icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-xl mb-4 text-slate-900">{step.title}</h3>
-                  <p className="text-slate-600 leading-relaxed">
-                    {step.description}
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Connection Line (except for last item) */}
-              {index < processSteps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-blue-300 to-purple-300 z-0"></div>
-              )}
-            </motion.div>
-          ))}
+    <section id="proceso" className="py-20">
+      <div className="section-shell">
+        <div className="text-center mb-14">
+          <h2 className="section-title mb-5">Un proceso claro, rápido y colaborativo</h2>
+          <p className="section-subtitle">Trabajo por fases para reducir riesgo y acelerar resultados.</p>
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-16"
-        >
-          <div className="bg-white p-8 rounded-2xl shadow-lg max-w-2xl mx-auto">
-            <h3 className="text-2xl mb-4 text-slate-900">¿Listo para empezar?</h3>
-            <p className="text-slate-600 mb-6">
-              El primer paso es una conversación sin compromiso donde exploramos tu proyecto 
-              y definimos la mejor estrategia para alcanzar tus objetivos.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <div className="flex items-center gap-2 text-sm text-slate-600">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                Consulta gratuita
+        <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-5">
+          {processSteps.map((step, index) => (
+            <motion.article
+              key={step.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: index * 0.05 }}
+              className="glass-card-soft rounded-2xl p-6"
+            >
+              <div className="flex items-center justify-between mb-4">
+                <step.icon className="w-7 h-7 text-cyan-300" />
+                <span className="text-xs text-slate-300 px-2 py-1 rounded-full border border-white/20">0{index + 1}</span>
               </div>
-              <div className="flex items-center gap-2 text-sm text-slate-600">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                Sin compromiso
-              </div>
-              <div className="flex items-center gap-2 text-sm text-slate-600">
-                <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                Respuesta en 24h
-              </div>
-            </div>
-          </div>
-        </motion.div>
+              <h3 className="text-xl text-white mb-2">{step.title}</h3>
+              <p className="text-slate-300">{step.description}</p>
+            </motion.article>
+          ))}
+        </div>
       </div>
     </section>
   );
