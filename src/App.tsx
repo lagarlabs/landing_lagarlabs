@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div className="min-h-screen liquid-bg text-slate-100">
       <Header />
-      <main className="space-y-12 pb-10">
+      <main>
         <Hero />
         <Services />
         <Process />
