@@ -1,0 +1,436 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - button "LagarLabs Dev Studio" [ref=e7]:
+        - img [ref=e12]
+        - generic [ref=e16]:
+          - generic [ref=e17]: LagarLabs
+          - generic [ref=e18]:
+            - img [ref=e19]
+            - text: Dev Studio
+      - generic [ref=e21]:
+        - button "Inicio" [ref=e22]: Inicio
+        - button "Servicios" [ref=e24]
+        - button "Proceso" [ref=e25]
+        - button "Portfolio" [ref=e26]
+        - button "Contacto" [ref=e27]
+      - button "Hablemos" [ref=e29]
+  - main [ref=e30]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - img [ref=e37]
+          - generic [ref=e39]: Diseño + desarrollo para marcas que quieren destacar
+        - heading "Landing moderna, impacto real." [level=1] [ref=e40]:
+          - generic [ref=e41]: Landing moderna,
+          - generic [ref=e42]: impacto real.
+        - paragraph [ref=e43]: Diseño experiencias digitales premium con estética contemporánea, animaciones fluidas y enfoque en conversión para transformar visitas en oportunidades.
+        - generic [ref=e44]:
+          - button "Quiero rediseñar mi web" [ref=e45]:
+            - text: Quiero rediseñar mi web
+            - img
+          - button "Ver casos reales" [ref=e46]
+        - generic [ref=e47]:
+          - generic [ref=e48]:
+            - paragraph [ref=e49]: 60+
+            - paragraph [ref=e50]: Proyectos lanzados
+          - generic [ref=e51]:
+            - paragraph [ref=e52]: 4.9/5
+            - paragraph [ref=e53]: Valoración media
+          - generic [ref=e54]:
+            - paragraph [ref=e55]: <24h
+            - paragraph [ref=e56]: Respuesta inicial
+      - generic [ref=e57]:
+        - generic [ref=e58]:
+          - img [ref=e60]
+          - heading "Frontend premium" [level=3] [ref=e64]
+          - paragraph [ref=e65]: UI moderna, tipografía cuidada y animación elegante que convierte visitantes.
+        - generic [ref=e66]:
+          - img [ref=e68]
+          - heading "Arquitectura limpia" [level=3] [ref=e72]
+          - paragraph [ref=e73]: Componentes escalables y código mantenible para crecer sin fricción.
+        - generic [ref=e74]:
+          - img [ref=e76]
+          - heading "Performance primero" [level=3] [ref=e81]
+          - paragraph [ref=e82]: Carga rápida y experiencia sólida en móvil y desktop desde el primer día.
+        - generic [ref=e84]:
+          - generic [ref=e85]:
+            - generic [ref=e86]: A
+            - generic [ref=e87]: B
+            - generic [ref=e88]: C
+            - generic [ref=e89]: D
+            - generic [ref=e90]: E
+          - generic [ref=e91]:
+            - generic [ref=e92]:
+              - img [ref=e93]
+              - img [ref=e95]
+              - img [ref=e97]
+              - img [ref=e99]
+              - img [ref=e101]
+            - paragraph [ref=e103]: +60 clientes satisfechos
+    - generic [ref=e105]:
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - img [ref=e108]
+          - text: Servicios
+        - heading "Servicios para elevar tu presencia digital" [level=2] [ref=e111]
+        - paragraph [ref=e112]: "No solo diseño bonito: creo producto digital sólido, usable y preparado para crecer."
+      - generic [ref=e113]:
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - img [ref=e119]
+            - generic [ref=e122]: Popular
+          - heading "Webs que convierten" [level=3] [ref=e123]
+          - paragraph [ref=e124]: Landings y sitios corporativos con foco en mensaje, claridad y conversiones.
+          - list [ref=e125]:
+            - listitem [ref=e126]:
+              - img [ref=e128]
+              - text: Arquitectura de contenido
+            - listitem [ref=e130]:
+              - img [ref=e132]
+              - text: UI responsive
+            - listitem [ref=e134]:
+              - img [ref=e136]
+              - text: SEO técnico
+          - button "Solicitar propuesta" [ref=e138]:
+            - text: Solicitar propuesta
+            - img
+        - generic [ref=e141]:
+          - img [ref=e144]
+          - heading "Apps a medida" [level=3] [ref=e146]
+          - paragraph [ref=e147]: Herramientas internas o de cliente para digitalizar y automatizar procesos.
+          - list [ref=e148]:
+            - listitem [ref=e149]:
+              - img [ref=e151]
+              - text: Flujos personalizados
+            - listitem [ref=e153]:
+              - img [ref=e155]
+              - text: Integración APIs
+            - listitem [ref=e157]:
+              - img [ref=e159]
+              - text: Paneles de control
+          - button "Solicitar propuesta" [ref=e161]:
+            - text: Solicitar propuesta
+            - img
+        - generic [ref=e164]:
+          - img [ref=e167]
+          - heading "Brand experience" [level=3] [ref=e171]
+          - paragraph [ref=e172]: Dirección visual moderna para dar una imagen más premium y diferenciada.
+          - list [ref=e173]:
+            - listitem [ref=e174]:
+              - img [ref=e176]
+              - text: Sistema visual
+            - listitem [ref=e178]:
+              - img [ref=e180]
+              - text: Microinteracciones
+            - listitem [ref=e182]:
+              - img [ref=e184]
+              - text: Consistencia cross-device
+          - button "Solicitar propuesta" [ref=e186]:
+            - text: Solicitar propuesta
+            - img
+        - generic [ref=e189]:
+          - img [ref=e192]
+          - heading "Mantenimiento continuo" [level=3] [ref=e194]
+          - paragraph [ref=e195]: Soporte técnico para mantener estabilidad, seguridad y evolución del producto.
+          - list [ref=e196]:
+            - listitem [ref=e197]:
+              - img [ref=e199]
+              - text: Mejoras continuas
+            - listitem [ref=e201]:
+              - img [ref=e203]
+              - text: Hardening
+            - listitem [ref=e205]:
+              - img [ref=e207]
+              - text: Monitoreo
+          - button "Solicitar propuesta" [ref=e209]:
+            - text: Solicitar propuesta
+            - img
+        - generic [ref=e212]:
+          - img [ref=e215]
+          - heading "Optimización" [level=3] [ref=e220]
+          - paragraph [ref=e221]: Auditoría y mejoras en performance, UX y embudos de conversión.
+          - list [ref=e222]:
+            - listitem [ref=e223]:
+              - img [ref=e225]
+              - text: Core Web Vitals
+            - listitem [ref=e227]:
+              - img [ref=e229]
+              - text: UX tuning
+            - listitem [ref=e231]:
+              - img [ref=e233]
+              - text: Iteración por datos
+          - button "Solicitar propuesta" [ref=e235]:
+            - text: Solicitar propuesta
+            - img
+        - generic [ref=e238]:
+          - img [ref=e241]
+          - heading "Consultoría técnica" [level=3] [ref=e244]
+          - paragraph [ref=e245]: Ayuda estratégica para definir stack, roadmap y prioridades de desarrollo.
+          - list [ref=e246]:
+            - listitem [ref=e247]:
+              - img [ref=e249]
+              - text: Plan tecnológico
+            - listitem [ref=e251]:
+              - img [ref=e253]
+              - text: Análisis de viabilidad
+            - listitem [ref=e255]:
+              - img [ref=e257]
+              - text: Estrategia de producto
+          - button "Solicitar propuesta" [ref=e259]:
+            - text: Solicitar propuesta
+            - img
+    - generic [ref=e261]:
+      - generic [ref=e262]:
+        - generic [ref=e263]:
+          - img [ref=e264]
+          - text: Proceso de trabajo
+        - heading "Un proceso claro, rápido y colaborativo" [level=2] [ref=e266]
+        - paragraph [ref=e267]: Trabajo por fases para reducir riesgo y acelerar resultados.
+      - generic [ref=e268]:
+        - article [ref=e269]:
+          - generic [ref=e270]:
+            - img [ref=e272]
+            - generic [ref=e274]: "01"
+          - heading "Discovery" [level=3] [ref=e275]
+          - paragraph [ref=e276]: Entendemos objetivos, público y expectativas del proyecto para alinear visión.
+        - article [ref=e278]:
+          - generic [ref=e279]:
+            - img [ref=e281]
+            - generic [ref=e283]: "02"
+          - heading "Dirección creativa" [level=3] [ref=e284]
+          - paragraph [ref=e285]: Definimos concepto visual, tono y arquitectura de pantalla antes de escribir código.
+        - article [ref=e287]:
+          - generic [ref=e288]:
+            - img [ref=e290]
+            - generic [ref=e294]: "03"
+          - heading "Build" [level=3] [ref=e295]
+          - paragraph [ref=e296]: Desarrollo en componentes modernos, optimizados y completamente responsivos.
+        - article [ref=e298]:
+          - generic [ref=e299]:
+            - img [ref=e301]
+            - generic [ref=e303]: "04"
+          - heading "QA & refinamiento" [level=3] [ref=e304]
+          - paragraph [ref=e305]: Pulimos interacciones, responsive y calidad final hasta alcanzar la perfección.
+        - article [ref=e307]:
+          - generic [ref=e308]:
+            - img [ref=e310]
+            - generic [ref=e315]: "05"
+          - heading "Launch" [level=3] [ref=e316]
+          - paragraph [ref=e317]: Despliegue con checklist técnico completo y analítica activada desde el primer día.
+        - article [ref=e319]:
+          - generic [ref=e320]:
+            - img [ref=e322]
+            - generic [ref=e324]: "06"
+          - heading "Iteración" [level=3] [ref=e325]
+          - paragraph [ref=e326]: Mejora continua con soporte activo y evolución de features basada en datos.
+      - paragraph [ref=e329]: Desde la primera conversación hasta el lanzamiento en 2–4 semanas. Transparencia total en cada paso del proceso.
+    - generic [ref=e331]:
+      - generic [ref=e332]:
+        - generic [ref=e333]:
+          - img [ref=e334]
+          - text: Portfolio
+        - heading "Portfolio con enfoque en producto real" [level=2] [ref=e338]
+        - paragraph [ref=e339]: Soluciones construidas para uso real, con usabilidad, rendimiento y visión de negocio.
+      - generic [ref=e340]:
+        - generic [ref=e342]:
+          - generic [ref=e343]:
+            - img "App de Tareas Industrial" [ref=e344]
+            - generic [ref=e345]: Gestión Industrial
+          - generic [ref=e346]:
+            - heading "App de Tareas Industrial" [level=3] [ref=e347]
+            - paragraph [ref=e348]: Gestión operativa para tareas, equipos y personal en entornos industriales con dashboard en tiempo real.
+            - generic [ref=e349]:
+              - generic [ref=e350]: React
+              - generic [ref=e351]: Vite
+              - generic [ref=e352]: CSS
+            - generic [ref=e353]:
+              - button "Ver caso" [ref=e354]:
+                - img
+                - text: Ver caso
+              - button "Código" [ref=e355]:
+                - img
+                - text: Código
+        - generic [ref=e357]:
+          - generic [ref=e358]:
+            - img "App de Gestión de Compras y Ventas" [ref=e359]
+            - generic [ref=e360]: ERP Industrial
+          - generic [ref=e361]:
+            - heading "App de Gestión de Compras y Ventas" [level=3] [ref=e362]
+            - paragraph [ref=e363]: Sistema integral para compras, ventas, stock y reportes ejecutivos con trazabilidad completa.
+            - generic [ref=e364]:
+              - generic [ref=e365]: React
+              - generic [ref=e366]: Vite
+              - generic [ref=e367]: CSS
+            - generic [ref=e368]:
+              - button "Ver caso" [ref=e369]:
+                - img
+                - text: Ver caso
+              - button "Código" [ref=e370]:
+                - img
+                - text: Código
+        - generic [ref=e372]:
+          - generic [ref=e373]:
+            - img "EventoPro" [ref=e374]
+            - generic [ref=e375]: Eventos
+          - generic [ref=e376]:
+            - heading "EventoPro" [level=3] [ref=e377]
+            - paragraph [ref=e378]: Plataforma para organizar eventos con asistentes, agenda y gestión de proveedores integrada.
+            - generic [ref=e379]:
+              - generic [ref=e380]: Base44
+              - generic [ref=e381]: Node.js
+              - generic [ref=e382]: CSS
+            - generic [ref=e383]:
+              - button "Ver caso" [ref=e384]:
+                - img
+                - text: Ver caso
+              - button "Código" [ref=e385]:
+                - img
+                - text: Código
+        - generic [ref=e387]:
+          - generic:
+            - img "Medidesk"
+            - generic [ref=e388]: Salud
+          - generic [ref=e389]:
+            - heading "Medidesk" [level=3] [ref=e390]
+            - paragraph [ref=e391]: Asistente médico virtual con seguimiento de pacientes, agenda y gestión de consultas.
+            - generic [ref=e392]:
+              - generic [ref=e393]: Base44
+              - generic [ref=e394]: Node.js
+              - generic [ref=e395]: CSS
+            - generic [ref=e396]:
+              - button "Ver caso" [ref=e397]:
+                - img
+                - text: Ver caso
+              - button "Código" [ref=e398]:
+                - img
+                - text: Código
+    - generic [ref=e401]:
+      - generic [ref=e402]:
+        - generic [ref=e403]:
+          - img [ref=e404]
+          - text: Contacto
+        - heading "Convirtamos tu idea en un producto memorable" [level=2] [ref=e406]
+        - paragraph [ref=e407]: Cuéntame tu objetivo y te propongo una dirección clara para ejecutar rápido y bien.
+      - generic [ref=e408]:
+        - generic [ref=e409]:
+          - heading "Contacto directo" [level=3] [ref=e410]
+          - generic [ref=e411]:
+            - generic [ref=e412]:
+              - img [ref=e414]
+              - generic [ref=e417]:
+                - paragraph [ref=e418]: Email
+                - paragraph [ref=e419]: lagarlabs@gmail.com
+            - generic [ref=e420]:
+              - img [ref=e422]
+              - generic [ref=e424]:
+                - paragraph [ref=e425]: Teléfono
+                - paragraph [ref=e426]: +34 670 581 236
+            - generic [ref=e427]:
+              - img [ref=e429]
+              - generic [ref=e432]:
+                - paragraph [ref=e433]: Ubicación
+                - paragraph [ref=e434]: Agüimes, Las Palmas
+            - generic [ref=e435]:
+              - img [ref=e437]
+              - generic [ref=e440]:
+                - paragraph [ref=e441]: Respuesta
+                - paragraph [ref=e442]: Menos de 24 horas
+          - generic [ref=e443]:
+            - paragraph [ref=e444]: Sígueme en redes
+            - generic [ref=e445]:
+              - button "LinkedIn" [ref=e446]:
+                - img [ref=e447]
+                - text: LinkedIn
+              - button "GitHub" [ref=e451]:
+                - img [ref=e452]
+                - text: GitHub
+        - generic [ref=e456]:
+          - generic [ref=e457]:
+            - generic [ref=e458]:
+              - generic [ref=e459]: Nombre *
+              - textbox "Nombre *" [ref=e460]:
+                - /placeholder: Tu nombre
+            - generic [ref=e461]:
+              - generic [ref=e462]: Email *
+              - textbox "Email *" [ref=e463]:
+                - /placeholder: tu@email.com
+          - generic [ref=e464]:
+            - generic [ref=e465]:
+              - generic [ref=e466]: Empresa
+              - textbox "Empresa" [ref=e467]:
+                - /placeholder: Nombre de empresa
+            - generic [ref=e468]:
+              - generic [ref=e469]: Tipo de proyecto *
+              - combobox "Tipo de proyecto *" [ref=e470]:
+                - option "Selecciona" [selected]
+                - option "Landing page"
+                - option "E-commerce"
+                - option "Aplicación web"
+                - option "Web corporativa"
+                - option "Herramienta personalizada"
+          - generic [ref=e471]:
+            - generic [ref=e472]: Presupuesto
+            - combobox "Presupuesto" [ref=e473]:
+              - option "Selecciona tu rango" [selected]
+              - option "€1.000 - €3.000"
+              - option "€3.000 - €5.000"
+              - option "€5.000 - €10.000"
+              - option "€10.000+"
+          - generic [ref=e474]:
+            - generic [ref=e475]: Cuéntame tu proyecto *
+            - textbox "Cuéntame tu proyecto *" [ref=e476]:
+              - /placeholder: Describe brevemente tu proyecto, objetivos y cualquier detalle relevante...
+          - generic [ref=e477] [cursor=pointer]:
+            - checkbox "Quiero agendar una llamada" [ref=e479]
+            - generic [ref=e481]: Quiero agendar una llamada
+          - button "Enviar por WhatsApp" [ref=e482]:
+            - img
+            - text: Enviar por WhatsApp
+  - contentinfo [ref=e483]:
+    - generic [ref=e486]:
+      - generic [ref=e487]:
+        - generic [ref=e488]:
+          - generic [ref=e489]:
+            - img [ref=e494]
+            - generic [ref=e498]:
+              - generic [ref=e499]: LagarLabs
+              - generic [ref=e500]:
+                - img [ref=e501]
+                - text: Dev Studio
+          - paragraph [ref=e503]: Desarrollo de experiencias web modernas, rápidas y orientadas a negocio.
+        - generic [ref=e504]:
+          - heading "Navegación" [level=3] [ref=e505]
+          - generic [ref=e506]:
+            - button "Servicios" [ref=e507]
+            - button "Proceso" [ref=e508]
+            - button "Portfolio" [ref=e509]
+            - button "Contacto" [ref=e510]
+        - generic [ref=e511]:
+          - heading "Contacto" [level=3] [ref=e512]
+          - generic [ref=e513]:
+            - paragraph [ref=e514]:
+              - img [ref=e515]
+              - text: lagarlabs@gmail.com
+            - paragraph [ref=e518]:
+              - img [ref=e519]
+              - text: +34 670 581 236
+            - paragraph [ref=e521]:
+              - img [ref=e522]
+              - text: Agüimes, Las Palmas
+        - generic [ref=e525]:
+          - heading "Social" [level=3] [ref=e526]
+          - generic [ref=e527]:
+            - button "LinkedIn" [ref=e528]:
+              - img [ref=e529]
+              - text: LinkedIn
+            - button "GitHub" [ref=e533]:
+              - img [ref=e534]
+              - text: GitHub
+      - generic [ref=e537]:
+        - paragraph [ref=e538]: © 2026 LagarLabs. Diseño y desarrollo web moderno.
+        - generic [ref=e539]:
+          - generic [ref=e540]: Hecho con ♥ en Las Palmas
+          - button "Subir" [ref=e541]:
+            - img
+            - text: Subir
